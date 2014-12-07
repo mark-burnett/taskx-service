@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.conf.urls import url, include
 from rest_framework import routers
+import django.contrib.staticfiles.views
 import importlib
 
 views = importlib.import_module('%s.views' % settings.TASKX_APP_MODULE)
@@ -13,5 +14,6 @@ router.register(r'tasks', views.TaskViewSet)
 urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls',
-                               namespace='rest_framework'))
+                               namespace='rest_framework')),
+    url(r'^static/(?P<path>.*)$', django.contrib.staticfiles.views.serve),
 ]
