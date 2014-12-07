@@ -6,9 +6,6 @@ TASKX_APP_NAME = os.environ['TASKX_APP_NAME']
 TASKX_APP_MODULE = os.environ['TASKX_APP_MODULE']
 
 
-BASE_DIR = os.path.abspath(os.environ['BASE_DIR'])
-
-
 # Security settings
 SECRET_KEY = os.environ['SECRET_KEY']
 
