@@ -6,10 +6,6 @@ TASKX_APP_NAME = os.environ['TASKX_APP_NAME']
 TASKX_APP_MODULE = os.environ['TASKX_APP_MODULE']
 
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
-
 # Security settings
 SECRET_KEY = os.environ['SECRET_KEY']
 
