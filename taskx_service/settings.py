@@ -1,4 +1,5 @@
 import dj_database_url
+import importlib
 import os
 
 
@@ -7,7 +8,8 @@ TASKX_APP_MODULE = os.environ['TASKX_APP_MODULE']
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(
+    importlib.import_module(TASKX_APP_MODULE).__file__))
 
 
 # Security settings
