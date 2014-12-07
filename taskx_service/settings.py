@@ -16,9 +16,11 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 TEMPLATE_DEBUG = False
+LOG_LEVEL = 'INFO'
 if os.environ.get('DEBUG'):
     DEBUG = True
     TEMPLATE_DEBUG = True
+    LOG_LEVEL = 'DEBUG'
 
 ALLOWED_HOSTS = ['*']
 
@@ -92,7 +94,7 @@ LOGGING = {
     'version': 1,
     'loggers': {
         'django': {
-            'level': 'DEBUG',
+            'level': LOG_LEVEL,
         },
     },
 }
