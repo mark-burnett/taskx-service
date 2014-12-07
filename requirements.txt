@@ -1,0 +1,9 @@
+Django
+celery
+dj-database-url
+django-extensions
+django-pgjson
+djangorestframework
+psycopg2
+requests
+whitenoise
