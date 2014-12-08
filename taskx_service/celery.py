@@ -15,7 +15,7 @@ app.config_from_object('django.conf:settings')
 app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 
 
-@app(bind=True, name='webhook')
+@app.task(bind=True, name='webhook')
 def webhook(self, url, body_data):
     response = requests.patch(url, body_data,
                               headers={'Content-Type': 'application/json'})
